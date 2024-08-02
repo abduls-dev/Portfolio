@@ -17,9 +17,23 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Responsive Portfolio Website - Bedimcode</title>
+
+    <style>
+      /* Ensure particles-js covers the entire viewport */
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure it's behind all other content */
+      }
+    </style>
   </head>
   <body>
-    <!--==================== HEADER ====================-->
+    <div id="particles-js"></div>
+
+    <!--=============== HEADER ===============-->
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Abduls</a>
@@ -45,7 +59,7 @@
       </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
+    <!--=============== MAIN ===============-->
     <main class="main">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
@@ -118,7 +132,7 @@
               </p>
 
               <a
-                href="pdf/Tailor-Cv.pdf"
+                href="pdf/Abdullah-Cv.pdf"
                 download=""
                 target="_blank"
                 class="button about__button"
@@ -330,6 +344,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
