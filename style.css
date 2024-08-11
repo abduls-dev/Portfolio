@@ -793,3 +793,91 @@ img {
 		right: 3rem;
 	}
 }
+/* Fade-in effect for sections */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.section {
+	animation: fadeIn 1s ease-out;
+}
+
+/* Animated underline for nav links */
+.nav__link::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: var(--first-color-light);
+	transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+	width: 100%;
+}
+
+/* Pulse animation for the scroll-down button */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.home__scroll-box {
+	animation: pulse 2s infinite;
+}
+
+/* Rotate animation for skill icons */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.skills__img:hover {
+	animation: rotate 1s linear;
+}
+
+/* Slide-in animation for contact form */
+@keyframes slideIn {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.contact__form {
+	animation: slideIn 0.8s ease-out;
+}
+
+/* Hover effect for work cards */
+.work__link {
+	transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.work__link:hover {
+	transform: translateY(-0.5rem);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
